@@ -1,0 +1,20 @@
+# YOLOv8 training config — TACO-based trash detector
+model: yolov8s.pt
+data: configs/detector_data.yaml
+epochs: 100
+imgsz: 640
+batch: 16
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3
+patience: 20
+save_period: 10
+project: runs/detect/detector
+name: trash_yolov8s
+device: 0         # "cpu" or 0 (first GPU) or "cuda:0"
+workers: 4
+augment: true
+cache: false
+exist_ok: true

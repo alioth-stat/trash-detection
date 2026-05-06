@@ -1,0 +1,20 @@
+device: cpu           # "cpu" | "cuda" | "mps"
+detector:
+  weights: weights/detector.pt
+  conf_threshold: 0.40
+  iou_threshold: 0.45
+  imgsz: 640
+
+classifier:
+  weights: weights/classifier.pt
+  conf_threshold: 0.50
+  imgsz: 224
+  topk: 1
+
+brand:
+  enabled: false        # Phase 3
+  conf_threshold: 0.60
+
+logging:
+  output_path: results.jsonl
+  append: true

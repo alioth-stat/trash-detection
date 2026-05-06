@@ -1,0 +1,21 @@
+# EfficientNet-B0 classifier training config — TrashNet-based
+backbone: efficientnet_b0
+pretrained: true
+num_classes: 3          # plastic, paper, metal
+classes:
+  - plastic
+  - paper
+  - metal
+
+data_dir: data/processed/classifier
+epochs: 50
+batch_size: 64
+imgsz: 224
+lr: 1.0e-3
+weight_decay: 1.0e-4
+scheduler: cosine
+warmup_epochs: 2
+patience: 10
+save_dir: runs/classifier
+device: 0
+workers: 8

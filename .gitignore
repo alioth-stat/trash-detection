@@ -1,0 +1,14 @@
+.venv/
+data/raw/
+data/processed/
+weights/
+runs/
+__pycache__/
+*.pyc
+*.pt
+*.pth
+*.egg-info/
+.env
+results.jsonl
+detections.jsonl
+data/snapshots/
